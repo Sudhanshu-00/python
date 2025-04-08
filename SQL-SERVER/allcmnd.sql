@@ -52,3 +52,6 @@ INSERT INTO studentInfo(Roll_no, Name, Address, Contact, Age) VALUES
 
 -- select * from studentInfo
 -- order by Name asc;
+
+SELECT * FROM studentInfo
+WHERE Roll_no = 15

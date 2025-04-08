@@ -1,4 +1,5 @@
-create DATABASE Mydb
+-- create DATABASE Mydb
+
 use MySql
 --for crate table 
 create table studentInfo(
@@ -8,13 +9,14 @@ Address varchar(100),
 Contact BIGINT NOT NULL,
 Age INT );
 SELECT * FROM studentInfo
+
 -- -- for update 
--- alter table studentInfo
--- alter column Contact BIGINT
+alter table studentInfo
+alter column Contact BIGINT
 
 -- --add column
--- alter table studentInfo
--- add Pincode INT;
+alter table studentInfo
+add Pincode INT;
 
 -- for insert data in table
 
@@ -44,12 +46,20 @@ INSERT INTO studentInfo(Roll_no, Name, Address, Contact, Age) VALUES
 -- select * from studentInfo
 
 -- -- short in descending order
--- select * from studentInfo
--- order by Roll_no desc;
+select * from studentInfo
+order by Roll_no desc;
 
 -- -- short in Aescending order
--- select * from studentInfo
+select * from studentInfo
 -- order by Roll_no asc;
 
--- select * from studentInfo
--- order by Name asc;
+select * from studentInfo
+order by Name asc;
+
+-- All count the all table COLUMN
+SELECT COUNT(*) AS DIST
+FROM studentInfo
+
+-- DISTINCT is key word it will give unique data from the TABLE of COLUMN 
+-- SELECT COUNT(distinct(Column_name) AS Alias_name , COUNT(distinct(Column_name) AS Alias_name )
+SELECT COUNT(distinct(Address)) AS addhere , COUNT(distinct(Name)) AS Nm FROM studentInfo
