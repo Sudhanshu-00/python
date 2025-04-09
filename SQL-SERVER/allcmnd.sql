@@ -1,4 +1,5 @@
-use myyfile
+--use myyfile
+
 --for crate table 
 /*create table studentInfo(
 Roll_no INT primary key,
@@ -55,3 +56,21 @@ INSERT INTO studentInfo(Roll_no, Name, Address, Contact, Age) VALUES
 
 SELECT * FROM studentInfo
 WHERE Roll_no = 15
+
+-- SELECT MIN(age) as find FROM studentInfo
+-- COUNT,MAX,Sum,Avg,Min these are aggregate function
+-- SELECT COUNT(Age) as find FROM studentInfo
+
+SELECT Age, count(Age) as [group of age] FROM studentInfo
+GROUP by Age;   -- this is used to count the number of age in table
+SELECT Age, AVG(Age) as [group of age] FROM studentInfo
+GROUP by Age; -- this is used to find the average of age in table
+SELECT Age, MIN(Age) as [group of age] FROM studentInfo
+GROUP by Age; -- this is used to find the minimum age in table
+SELECT Age, MAX(Age) as [group of age] FROM studentInfo
+GROUP by Age; -- this is used to find the maximum age in table
+SELECT Age, SUM(Age) as [group of age] FROM studentInfo
+GROUP by Age; -- this is used to find the sum of age in table
+-- SELECT * FROM studentInfo    
+-- WHERE Roll_no BETWEEN 1 AND 5; -- this is used to find the roll no between 1 to 5
+-- SELECT * FROM studentInfo    
