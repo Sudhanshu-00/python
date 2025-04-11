@@ -1,5 +1,5 @@
 -- create database myyfile;
--- use myyfile
+use myyfile
 
 -- create table employe(
 -- custm_id int primary key, 
@@ -13,3 +13,4 @@
 
 -- insert into employe values(1,'jai',987464123,'bihar buxar','buxar',802101,'india');
 -- select * from employe
+SELECT * from employe

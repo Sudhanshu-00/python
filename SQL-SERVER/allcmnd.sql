@@ -72,5 +72,6 @@ GROUP by Age; -- this is used to find the maximum age in table
 SELECT Age, SUM(Age) as [group of age] FROM studentInfo
 GROUP by Age; -- this is used to find the sum of age in table
 -- SELECT * FROM studentInfo    
+
 -- WHERE Roll_no BETWEEN 1 AND 5; -- this is used to find the roll no between 1 to 5
 -- SELECT * FROM studentInfo    
