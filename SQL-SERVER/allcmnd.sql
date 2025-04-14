@@ -1,3 +1,5 @@
+Create database myyfile
+
 --use myyfile
 
 --for crate table 
