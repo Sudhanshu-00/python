@@ -22,11 +22,11 @@
 #      x+=1
 #  print("\n")
 
-x=int(input("enter no : "))
-y=int(input("enter no : "))
-for i in range(x,y):
-    j=0
-    while x<y and j<i:
-        j+=1
-        print("*", end=" ")
-    print("\n")
+# x=int(input("enter no : "))
+# y=int(input("enter no : "))
+# for i in range(x,y):
+#     j=0
+#     while x<y and j<i:
+#         j+=1
+#         print("*", end=" ")
+#     print("\n")
