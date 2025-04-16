@@ -44,8 +44,13 @@
 #     print(" "*(x-i),end=" ")
 #     print("*"*(2*i-1))
 
-x=int(input("enter rows : "))
-i = 1
-while i <= x:
-    print("|* " * i)
-    i += 1
+# x=int(input("enter rows : "))
+# i = 1
+# while i <= x:
+#     print("* " * i)
+#     i += 1
+
+# for i in range(10, 0, -1):
+#     print(i)
+#     i-=1
+
