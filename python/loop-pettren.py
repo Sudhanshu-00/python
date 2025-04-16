@@ -39,7 +39,13 @@
 #     else:
 #         print("odd",i, "\n")
 
-x=int(input("enter no : "))
-for i in range(1,x+1):
-    print(" "*(x-i),end=" ")
-    print("*"*(2*i-1))
+# x=int(input("enter no : "))
+# for i in range(1,x+1):
+#     print(" "*(x-i),end=" ")
+#     print("*"*(2*i-1))
+
+x=int(input("enter rows : "))
+i = 1
+while i <= x:
+    print("|* " * i)
+    i += 1
