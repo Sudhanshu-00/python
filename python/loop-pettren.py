@@ -24,9 +24,22 @@
 
 # x=int(input("enter no : "))
 # y=int(input("enter no : "))
-# for i in range(x,y):
+# for i in range(1,y):
 #     j=0
-#     while x<y and j<i:
+#     while 0<y and j<i:
 #         j+=1
 #         print("*", end=" ")
 #     print("\n")
+
+# x=int(input("enter no : "))
+# y=int(input("enter no : "))
+# for i in range(x,y):
+#     if (i%2==0):
+#         print("even",i, "\n")
+#     else:
+#         print("odd",i, "\n")
+
+x=int(input("enter no : "))
+for i in range(1,x+1):
+    print(" "*(x-i),end=" ")
+    print("*"*(2*i-1))
