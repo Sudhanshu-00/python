@@ -54,3 +54,10 @@
 #     print(i)
 #     i-=1
 
+# wap prime no in prime or no 
+# x=int(input("enter no : "))
+# for i in range(1,x+1):
+#     if (x%i==0):
+#         print("divisible by",i)
+#     else:
+#         print("not divisible by",i)
