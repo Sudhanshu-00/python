@@ -61,3 +61,28 @@
 #         print("divisible by",i)
 #     else:
 #         print("not divisible by",i)
+
+
+
+# list=[6,4,25,2,5,6,7,8,9,10,11,12,13,14,15]
+list=[]
+n = float(input("How many numbers do you want to enter? "))
+while n>0:
+    for i in range(int(n)):
+        if (n ==" "):
+            print("please enter number")
+        else:
+            x=float(input("enter no : "))
+            list.append(i)
+    print(list)
+    max_value = list[0]
+    for i in list:
+        if (i>max_value):
+            max_value = i
+    print("max value is", max_value)
+    
+    print("please enter number | press enter to exit")
+    continue
+
+
+
