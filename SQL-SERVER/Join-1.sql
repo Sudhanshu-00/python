@@ -1,0 +1,134 @@
+-- CREATE DATABASE commpanyDB;
+-- USE commpanyDB;
+-- Create Employees table
+-- Create a table named Employees with the following columns:
+-- CREATE TABLE Employees (
+    -- EmployeeID INT PRIMARY KEY,
+    -- Name NVARCHAR(50),
+    -- Department NVARCHAR(50),
+    -- WorkHours INT,
+    -- TaskCount INT,
+    -- Salary INT
+-- );
+-- 
+-- INSERT INTO Employees (EmployeeID, Name, Department, WorkHours, TaskCount, Salary)
+-- VALUES
+    -- (1, 'Alice', 'HR', 15, 25, 55000),
+    -- (2, 'Bob', 'Finance', 12, 30, 60000),
+    -- (3, 'Charlie', 'IT', 20, 18, 75000),
+    -- (4, 'David', 'Sales', 22, 20, 65000),
+    -- (5, 'Eva', 'HR', 18, 28, 59000),
+    -- (6, 'Frank', 'Finance', 16, 35, 60000),
+    -- (7, 'Grace', 'IT', 21, 22, 80000),
+    -- (8, 'Hank', 'Sales', 23, 21, 70000),
+    -- (9, 'Ivy', 'HR', 20, 29, 63000),
+    -- (10, 'Jack', 'Finance', 19, 32, 61000),
+    -- (11, 'Karen', 'IT', 25, 40, 90000);
+-- 
+-- Create Departments table
+-- Create a table named Departments with the following columns:
+-- CREATE TABLE Departments (
+    -- DepartmentID INT PRIMARY KEY,
+    -- DepartmentName NVARCHAR(50),
+    -- Location NVARCHAR(50),
+    -- Budget INT,
+    -- Head NVARCHAR(50)
+-- );
+-- INSERT INTO Departments (DepartmentID, DepartmentName, Location, Budget, Head)
+-- VALUES
+    -- (1, 'HR', 'New York', 500000, 'Alice'),
+    -- (2, 'Finance', 'Los Angeles', 600000, 'Bob'),
+    -- (3, 'IT', 'San Francisco', 700000, 'Charlie'),
+    -- (4, 'Sales', 'Chicago', 550000, 'David'),
+    -- (5, 'Marketing', 'Miami', 450000, 'Eva'),
+    -- (6, 'Operations', 'Seattle', 650000, 'Frank'),
+    -- (7, 'Support', 'Boston', 400000, 'Grace'),
+    -- (8, 'R&D', 'Austin', 750000, 'Hank'),
+    -- (9, 'Design', 'Denver', 500000, 'Ivy'),
+    -- (10, 'Legal', 'Phoenix', 300000, 'Jack'),
+    -- (11, 'Admin', 'Atlanta', 350000, 'Karen');
+-- Create Projects table
+-- Create a table named Projects with the following columns:
+-- CREATE TABLE Projects (
+    -- ProjectID INT PRIMARY KEY,
+    -- ProjectName NVARCHAR(50),
+    -- StartDate DATE,
+    -- EndDate DATE,
+    -- Budget INT,
+    -- DepartmentID INT,
+    -- FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+-- );
+-- INSERT INTO Projects (ProjectID, ProjectName, StartDate, EndDate, Budget, DepartmentID)
+-- VALUES
+    -- (1, 'Project A', '2023-01-01', '2023-06-30', 100000, 1),
+    -- (2, 'Project B', '2023-02-01', '2023-07-31', 150000, 2),
+    -- (3, 'Project C', '2023-03-01', '2023-08-31', 200000, 3),
+    -- (4, 'Project D', '2023-04-01', '2023-09-30', 120000, 4),
+    -- (5, 'Project E', '2023-05-01', '2023-10-31', 180000, 5),
+    -- (6, 'Project F', '2023-06-01', '2023-11-30', 160000, 6),
+    -- (7, 'Project G', '2023-07-01', '2023-12-31', 140000, 7),
+    -- (8, 'Project H', '2023-08-01', '2024-01-31', 170000, 8),
+    -- (9, 'Project I', '2023-09-01', '2024-02-29', 130000, 9),
+    -- (10, 'Project J', '2023-10-01', '2024-03-31', 190000, 10),
+    -- (11, 'Project K', '2023-11-01', '2024-04-30', 110000, 11);
+-- Create Tasks table
+-- Create a table named Tasks with the following columns:  
+-- CREATE TABLE Tasks (
+    -- TaskID INT PRIMARY KEY,
+    -- TaskName NVARCHAR(50),
+    -- AssignedTo INT,
+    -- ProjectID INT,
+    -- Status NVARCHAR(20),
+    -- FOREIGN KEY (AssignedTo) REFERENCES Employees(EmployeeID),
+    -- FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID)
+-- );
+-- INSERT INTO Tasks (TaskID, TaskName, AssignedTo, ProjectID, Status)
+-- VALUES
+    -- (1, 'Task 1', 1, 1, 'Completed'),
+    -- (2, 'Task 2', 2, 2, 'In Progress'),
+    -- (3, 'Task 3', 3, 3, 'Not Started'),
+    -- (4, 'Task 4', 4, 4, 'Completed'),
+    -- (5, 'Task 5', 5, 5, 'In Progress'),
+    -- (6, 'Task 6', 6, 6, 'Not Started'),
+    -- (7, 'Task 7', 7, 7, 'Completed'),
+    -- (8, 'Task 8', 8, 8, 'In Progress'),
+    -- (9, 'Task 9', 9, 9, 'Not Started'),
+    -- (10, 'Task 10', 10, 10, 'Completed'),
+    -- (11, 'Task 11', 11, 11, 'In Progress');
+    -- 
+-- CREATE table workTime (
+    -- EmployeeID INT,
+    -- WorkHours INT,
+    -- TaskCount INT,
+    -- Salary INT,
+    -- FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID)
+-- );
+-- INSERT INTO workTime (EmployeeID, WorkHours, TaskCount, Salary)
+-- VALUES
+    -- (1, 15, 25, 55000),
+    -- (2, 12, 30, 60000),
+    -- (3, 20, 18, 75000),
+    -- (4, 22, 20, 65000),
+    -- (5, 18, 28, 59000),
+    -- (6, 16, 35, 60000),
+    -- (7, 21, 22, 80000),
+    -- (8, 23, 21, 70000),
+    -- (9, 20, 29, 63000),
+    -- (10, 19, 32, 61000),
+    -- (11, 25, 40, 90000);
+-- Create a view named EmployeeDetails that selects all columns from Employees table
+-- Create a view named EmployeeProjectDetails that joins Employees, Projects, and Tasks tables
+-- 
+-- SELECT * from Employees;
+-- SELECT * from Departments;
+-- SELECT * from Projects; 
+-- SELECT * from Tasks;
+-- SELECT * from workTime;
+
+
+-- select * from Employees
+-- FULL join Departments on Employees.EmployeeID = Departments.DepartmentID
+-- FULL join Projects on Employees.EmployeeID = Projects.ProjectID
+-- FULL join Tasks on Employees.EmployeeID = Tasks.TaskID
+-- FULL join workTime on Employees.EmployeeID = workTime.EmployeeID;
+

@@ -2,11 +2,12 @@
 # docker ps -a
 # docker start c9c74f96fd2c 
 # docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Mssql##123' -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:latest
-# or 
-# docker exec -it c9c74f96fd2c /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Mssql##123'
 
 # docker logs <container_name>
 # docker exec -it <container_id> /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Mssql-420'
-# docker exec -it c9c74f96fd2c /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Mssql-420'
+
+# docker ps -a
+# docker start c9c74f96fd2c 
 # docker exec -it c9c74f96fd2c /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Mssql##123'
 # systemctl status docker    
+
